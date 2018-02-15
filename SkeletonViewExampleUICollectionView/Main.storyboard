@@ -42,10 +42,16 @@
                                             <segment title="Solid"/>
                                             <segment title="Gradient"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeSkeletonType:" destination="irH-dz-xqL" eventType="valueChanged" id="lfR-JV-DU4"/>
+                                        </connections>
                                     </segmentedControl>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBe-RM-BG8">
                                         <rect key="frame" x="310" y="21" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeAnimated:" destination="irH-dz-xqL" eventType="valueChanged" id="dlH-KK-iee"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animated" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSj-Ze-UIK">
                                         <rect key="frame" x="211" y="28" width="91" height="21"/>
@@ -69,6 +75,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUR-Qo-gHK">
                                         <rect key="frame" x="20" y="74" width="140" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="btnChangeColorTouchUpInside:" destination="irH-dz-xqL" eventType="touchUpInside" id="Xca-QC-htl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,7 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="2Gq-Y8-1TU"/>
                     </view>
                     <connections>
+                        <outlet property="avatarImage" destination="Ql9-Jy-aWM" id="VoL-by-ygR"/>
                         <outlet property="collectionView" destination="HKL-L0-T2w" id="HSe-j0-S5d"/>
+                        <outlet property="colorSelectedView" destination="HBJ-nh-56V" id="Iiq-iY-Glj"/>
+                        <outlet property="skeletonTypeSelector" destination="fMR-vj-7de" id="CgX-3A-weo"/>
+                        <outlet property="switchAnimated" destination="KBe-RM-BG8" id="emU-g9-NHT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkM-Y0-M5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
