@@ -50,3 +50,16 @@ extension UITableView: CollectionSkeleton {
         return estimatedRowHeight
     }
 }
+
+public extension UITableView {
+    func prepareSkeleton(completion: @escaping (Bool) -> Void) {
+        guard let originalDataSource = self.dataSource as? SkeletonCollectionViewDataSource,
+            !(originalDataSource is SkeletonCollectionDataSource)
+            else { return }
+        
+        let dataSource = SkeletonCollectionDataSource(collectionViewDataSource: originalDataSource, rowHeight: 0.0)
+        self.skeletonDataSource = dataSource
+        reloadData()
+        completion(true)
+    }
+}
