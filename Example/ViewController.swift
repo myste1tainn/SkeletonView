@@ -44,8 +44,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableview.isSkeletonable = true
         tableview.rowHeight = UITableViewAutomaticDimension
-        
-        tableview.register(UINib(nibName: "Cell", bundle: Bundle.main), forCellReuseIdentifier: "CellIdentifier")
         tableview.estimatedRowHeight = 200
     }
     
